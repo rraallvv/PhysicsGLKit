@@ -10,6 +10,8 @@
 	<string>PhysicsGLKit</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>4AC0ADC42B43CCD855B417291C60FFED7C960C2F</key>
+		<string>https://github.com/rraallvv/PhysicsGLKit.git</string>
 		<key>BFEF5CEA23E25BB62440E6F83376B01B5D1DDA69</key>
 		<string>https://github.com/rraallvv/TokamakPhysicsGLKit.git</string>
 	</dict>
@@ -17,15 +19,17 @@
 	<string>PhysicsGLKit.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>BFEF5CEA23E25BB62440E6F83376B01B5D1DDA69</key>
+		<key>4AC0ADC42B43CCD855B417291C60FFED7C960C2F</key>
 		<string>../..</string>
+		<key>BFEF5CEA23E25BB62440E6F83376B01B5D1DDA69</key>
+		<string>../../../PAL-GLKit</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/rraallvv/TokamakPhysicsGLKit.git</string>
+	<string>https://github.com/rraallvv/PhysicsGLKit.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>BFEF5CEA23E25BB62440E6F83376B01B5D1DDA69</string>
+	<string>4AC0ADC42B43CCD855B417291C60FFED7C960C2F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>BFEF5CEA23E25BB62440E6F83376B01B5D1DDA69</string>
 			<key>IDESourceControlWCCName</key>
 			<string>PAL-GLKit</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4AC0ADC42B43CCD855B417291C60FFED7C960C2F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PhysicsGLKit</string>
 		</dict>
 	</array>
 </dict>

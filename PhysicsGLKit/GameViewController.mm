@@ -6,6 +6,9 @@
 #import "GameViewController.h"
 #import <OpenGLES/ES2/glext.h>
 
+//#define USE_TOKAMAK
+#define USE_BULLET
+
 #if defined(USE_TOKAMAK)
 	#include "tokamak.h"
 #elif defined(USE_BULLET)
@@ -550,18 +553,22 @@ enum
 
 	self.effect.transform.projectionMatrix = projectionMatrix;
 
-	// Step the physcis simulation
-    int n=1;	// this value is for testing purposes, normaly stepSimulation() is called just once per tick
-    for (int i=0; i<n; ++i) {
+	static unsigned int step = 0;
+
+	// The simulation is updated once every spreadSteps, by the coresponding amount of time elapsed since the last update
+	const int spreadSteps = 4;
+
+	if (step++ % spreadSteps == 0)
+	{
+		// Advance the physcis simulation
+		float dt = spreadSteps * 1./60;
+
 #if defined(USE_TOKAMAK)
-        _simulator->Advance(1./60/n);
+		_simulator->Advance(dt);
 #elif defined(USE_BULLET)
-		_discreteDynamicsWorld->stepSimulation(
-											   1./60/n,
-											   0			// passing zero forces the simulation step to advance by exacty the time passed in the first argument
-											   );
+		_discreteDynamicsWorld->stepSimulation(dt, 0); // passing zero forces the simulation step to advance by exacty dt
 #endif
-    }
+	}
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect

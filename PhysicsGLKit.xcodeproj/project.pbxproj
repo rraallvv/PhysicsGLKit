@@ -1652,16 +1652,12 @@
 		E44804971A837897008E61C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"\"$(SRCROOT)/PhysicsGLKit/tokamak/include\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -1675,7 +1671,6 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"\"$(SRCROOT)/PhysicsGLKit/tokamak/include\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -1684,16 +1679,12 @@
 		E44804FE1A837AF4008E61C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"\"$(SRCROOT)/PhysicsGLKit/bullet\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -1707,7 +1698,6 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"\"$(SRCROOT)/PhysicsGLKit/bullet\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -1811,10 +1801,6 @@
 				);
 				INFOPLIST_FILE = PhysicsGLKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_CFLAGS = (
-					"-DUSE_TOKAMAK",
-					"-D_USE_BULLET",
-				);
 				PRODUCT_NAME = PhysicsGLKit;
 			};
 			name = Debug;
@@ -1831,10 +1817,6 @@
 				);
 				INFOPLIST_FILE = PhysicsGLKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_CFLAGS = (
-					"-DUSE_TOKAMAK",
-					"-D_USE_BULLET",
-				);
 				PRODUCT_NAME = PhysicsGLKit;
 			};
 			name = Release;
