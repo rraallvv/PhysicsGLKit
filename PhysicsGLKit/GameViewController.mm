@@ -556,7 +556,7 @@ enum
 	static unsigned int step = 0;
 
 	// The simulation is updated once every spreadSteps, by the coresponding amount of time elapsed since the last update
-	const int spreadSteps = 4;
+	const int spreadSteps = 1;
 
 	if (step++ % spreadSteps == 0)
 	{
