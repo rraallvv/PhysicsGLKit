@@ -551,7 +551,7 @@ enum
 - (void)update
 {
 	float aspect = fabsf(self.view.bounds.size.width / self.view.bounds.size.height);
-	GLKMatrix4 projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(60.0f), aspect, 0.1f, 100.0f);
+	GLKMatrix4 projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(68.0f), aspect, 0.1f, 100.0f);
 
 	self.effect.transform.projectionMatrix = projectionMatrix;
 
