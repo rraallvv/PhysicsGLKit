@@ -6,6 +6,8 @@
 #import "GameViewController.h"
 #import <OpenGLES/ES2/glext.h>
 
+#define RPM_TO_RADS(X)	(X*2.0f*M_PI/60.0f)
+
 //#define USE_TOKAMAK
 #define USE_BULLET
 
@@ -428,7 +430,7 @@ enum
 	joint->SetJointFrameWorld(trans);
 
 	joint->SetType(neJoint::NE_JOINT_HINGE);
-	joint->SetMotor(neJoint::NE_MOTOR_SPEED, -2.0f*M_PI/30.0f, 1024.0f);
+	joint->SetMotor(neJoint::NE_MOTOR_SPEED, -RPM_TO_RADS(2), 1024.0f);
 	joint->EnableMotor(true);
 
 	joint->Enable(true);
@@ -536,7 +538,7 @@ enum
 	btHingeConstraint* hinge = new btHingeConstraint(*body, btVector3(0.0f, 0.0f, 0.0f),  btVector3(0.0f, 0.0f, 1.0f));
 	_constraints.push_back(hinge);
 
-	hinge->enableAngularMotor(true, -4.0f*M_PI/60.0f, 1024.0f);
+	hinge->enableAngularMotor(true, -RPM_TO_RADS(2), 1024.0f);
 
 	_discreteDynamicsWorld->addConstraint(hinge);
 	
